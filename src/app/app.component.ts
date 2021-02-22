@@ -8,14 +8,12 @@ import {TreeNode} from "primeng/api";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  files1: TreeNode[];
+  files1: TreeNode[] = [];
 
   constructor(private nodeService: NodeService) {
-    console.error(this.nodeService.getFilesystem());
-    this.files1 = this.nodeService.getFilesystem();
   }
 
   ngOnInit(): void {
-    this.files1 = this.nodeService.getFilesystem();
+    this.nodeService.getFilesystem().then(files => this.files1 = files);
   }
 }
