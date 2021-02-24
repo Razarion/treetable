@@ -1,11 +1,5 @@
 <br>
-<p-treeTable [value]="treeNodes">
-  <ng-template pTemplate="header">
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-    </tr>
-  </ng-template>
+<p-treeTable [value]="treeNodes" styleClass="tdLessPadding">
   <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
     <tr [ttRow]="rowNode">
       <td>
