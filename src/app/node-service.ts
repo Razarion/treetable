@@ -29,6 +29,9 @@ export class NodeService {
       treeNode.data.name = value[0];
       if (value[1] instanceof Object) {
         treeNode.children = this.toTreeNodes(value[1]);
+        treeNode.data.deleteAllowed = true;
+      } else if (value[1] == null) {
+        treeNode.data.createAllowed = true;
       } else {
         treeNode.data.value = value[1];
       }
