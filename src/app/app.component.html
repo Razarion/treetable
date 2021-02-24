@@ -6,7 +6,7 @@
         <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
         {{rowData.name}}
       </td>
-      <td>{{rowData.value}}</td>
+      <td><input type="text" pInputText *ngIf="rowData.value" [(ngModel)]="rowData.value"/></td>
     </tr>
   </ng-template>
 </p-treeTable>
