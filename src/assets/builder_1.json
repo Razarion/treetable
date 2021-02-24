@@ -1,0 +1,69 @@
+{
+  "id": 1,
+  "internalName": "Builder",
+  "i18nName": {
+    "localizedStrings": {
+      "DE": "Baufahrzeug",
+      "EN": "Builder"
+    }
+  },
+  "i18nDescription": {
+    "localizedStrings": {
+      "DE": "Baut GebÃƒÆ’Ã‚Â¤ude",
+      "EN": "Builds buildings"
+    }
+  },
+  "shape3DId": 3,
+  "thumbnail": 45,
+  "physicalAreaConfig": {
+    "radius": 3.0,
+    "fixVerticalNorm": false,
+    "terrainType": "LAND",
+    "angularVelocity": 1.396,
+    "speed": 10.0,
+    "acceleration": 40.0
+  },
+  "health": 300,
+  "price": 300,
+  "buildup": 60,
+  "xpOnKilling": 2,
+  "consumingHouseSpace": 0,
+  "weaponType": null,
+  "factoryType": null,
+  "harvesterType": null,
+  "builderType": {
+    "range": 10.0,
+    "progress": 1.0,
+    "ableToBuildIds": [
+      4,
+      6,
+      7,
+      11,
+      21
+    ],
+    "animationOrigin": {
+      "x": 1.63196,
+      "y": 0.0,
+      "z": 3.04829
+    },
+    "animationShape3dId": null,
+    "animationParticleId": 6
+  },
+  "generatorType": null,
+  "consumerType": null,
+  "itemContainerType": null,
+  "houseType": null,
+  "specialType": null,
+  "dropBoxItemTypeId": null,
+  "dropBoxPossibility": 0.0,
+  "boxPickupRange": 2.0,
+  "unlockCrystals": null,
+  "spawnDurationMillis": 3000,
+  "spawnShape3DId": 2,
+  "spawnAudioId": 7,
+  "explosionParticleConfigId": 2,
+  "demolitionStepEffects": null,
+  "wreckageShape3DId": 16,
+  "demolitionImageId": 27,
+  "buildupTextureId": 17
+}

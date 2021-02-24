@@ -8,12 +8,12 @@ import {TreeNode} from "primeng/api";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  files1: TreeNode[] = [];
+  treeNodes: TreeNode[] = [];
 
   constructor(private nodeService: NodeService) {
   }
 
   ngOnInit(): void {
-    this.nodeService.getFilesystem().then(files => this.files1 = files);
+    this.nodeService.getRazarionConfig().then(treeNodes => this.treeNodes = treeNodes);
   }
 }

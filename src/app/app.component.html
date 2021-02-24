@@ -1,5 +1,5 @@
 <br>
-<p-treeTable [value]="files1">
+<p-treeTable [value]="treeNodes">
   <ng-template pTemplate="header">
     <tr>
       <th>Name</th>
@@ -12,7 +12,7 @@
         <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
         {{rowData.name}}
       </td>
-      <td>{{rowData.size}}</td>
+      <td>{{rowData.value}}</td>
     </tr>
   </ng-template>
 </p-treeTable>
