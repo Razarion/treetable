@@ -17,22 +17,22 @@ export class NodeService {
   getRazarionConfig() {
     return this.http.get<any>('assets/builder_1.json')
       .toPromise()
-      .then(res => this.toTreeNode(res));
+      .then(res => this.toTreeNodes(res));
   }
 
-  toTreeNode(data: any): TreeNode[] {
-    console.log(data);
+  private toTreeNodes(raZconfig: any): TreeNode[] {
+    console.log(raZconfig);
     let treeNodes: TreeNode[] = [];
-    Object.entries(data).forEach((value, index, array) => {
+    Object.entries(raZconfig).forEach((value) => {
       let treeNode: TreeNode = {};
-      treeNode.data = {
-        name: value[0],
-        value: value[1]
+      treeNode.data = {};
+      treeNode.data.name = value[0];
+      if (value[1] instanceof Object) {
+        treeNode.children = this.toTreeNodes(value[1]);
+      } else {
+        treeNode.data.value = value[1];
       }
       treeNodes.push(treeNode)
-      // console.log(value);
-      // console.log(index);
-      // console.log(array);
     })
     return treeNodes;
   }
